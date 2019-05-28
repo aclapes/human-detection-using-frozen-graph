@@ -1,5 +1,5 @@
-models/
-inferences/
+models/*
+!models/get_models_from_zoo.sh
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
