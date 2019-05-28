@@ -86,8 +86,8 @@ if __name__ == "__main__":
     framepath_list = sorted(framepath_list)[args.begin:end]
 
     # Model 1: Trade-off speed/accuracy
-    # http://download.tensorflow.org/models/object_detection/faster_rcnn_inception_v2_coco_2018_01_28.tar.gz
-    # model_name = 'faster_rcnn_inception_v2_coco_2018_01_28'
+    # http://download.tensorflow.org/models/object_detection/faster_rcnn_inception_resnet_v2_atrous_coco_2018_01_28.tar.gz
+    # model_name = 'faster_rcnn_inception_resnet_v2_atrous_coco_2018_01_28'
 
     # Model 2: Accuracy model
     # http://download.tensorflow.org/models/object_detection/faster_rcnn_nas_coco_2018_01_28.tar.gz
@@ -96,7 +96,7 @@ if __name__ == "__main__":
     # OR download any other model from: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
 
     model_suffix = 'frozen_inference_graph.pb'
-    model_path = os.path.join(model_name, model_suffix)
+    model_path = os.path.join("models", model_name, model_suffix)
 
     odapi = DetectorAPI(path_to_ckpt=model_path)
     threshold = 0.3
